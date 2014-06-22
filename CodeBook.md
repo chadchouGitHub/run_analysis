@@ -17,3 +17,13 @@ The zip file will unzip into 2 folder and several txt file. Two folders are "tes
 This data set came from 30 people. Each person perform 6 activities. Each activity record 128 time fragment Each time fragment record the sensor reading from X,Y, and Z.
 
 This Data set including 561 feature vector computing from 128 time fragment data for each subject in each activity.
+
+The merge of test and train will created a 180 (30 people with 6 activities) row data with 563 col (561 features plus subject ID and activities).
+
+The activities label in the train and test data set are label with class number (1~6) as show in activity_labels.txt.
+
+Transform activitiy class number into activity name with labels. 
+The older of elements in the label must match the activity_labels.txt. So the index number of elements in the lables can be use to subset the element to replace activity class number in the activity col.
+
+Use melt function and dcast function to create final_means data.
+
